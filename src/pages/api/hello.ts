@@ -5,7 +5,10 @@ type Data = {
   name: string;
 };
 
-export const runtime = 'edge'
+export const config = {
+	runtime: 'edge',
+};
+
 
 export default function handler(
   req: NextApiRequest,
