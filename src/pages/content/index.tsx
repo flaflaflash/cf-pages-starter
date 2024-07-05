@@ -1,6 +1,4 @@
-export const config = {
-	runtime: 'experimental-edge',
-};
+export const runtime = 'edge';
 export default function Content() {
   return <div>this is content page</div>;
 }
