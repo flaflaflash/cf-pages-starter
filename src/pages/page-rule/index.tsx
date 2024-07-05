@@ -1,7 +1,11 @@
 import type { GetServerSideProps } from "next";
 import { getCookie } from "cookies-next";
 
-export default function Content() {
+export const config = {
+	runtime: 'experimental-edge',
+};
+
+export default function RulePage() {
   return <div className="container">this is page rule page</div>;
 }
 
