@@ -1,12 +1,11 @@
 import type { GetServerSideProps } from "next";
-import { getCookie } from "cookies-next";
 
 export const config = {
-	runtime: 'experimental-edge',
+  runtime: "experimental-edge",
 };
 
 export default function RulePage() {
-  return <div className="container">this is page rule page</div>;
+  return <div className="container">this is page rule page 1</div>;
 }
 
 export const getServerSideProps: GetServerSideProps = async ({
@@ -15,8 +14,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   res,
   query,
 }) => {
-  const isDark = getCookie("is_night", { req, res });
-
+  const isDark = !!req.cookies.is_night;
   return {
     props: {
       isDark,
