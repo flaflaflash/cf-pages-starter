@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+.classic-dark .container {
+  background-color: black;
+  color: white;
+}
