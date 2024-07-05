@@ -14,6 +14,10 @@ export const getServerSideProps: GetServerSideProps = async ({
   query,
 }) => {
   const isDark = !!req.cookies.is_night
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=120'
+  )
   return {
     props: {
       isDark,
