@@ -25,6 +25,7 @@ export const getServerSideProps: GetServerSideProps = async ({
     "public, s-maxage=10, stale-while-revalidate=120"
   );
   const ua = req.headers["user-agent"];
+  console.log("ua:", ua);
   const isIPhone = ua?.indexOf("iPhone");
   const isAndroid = ua?.indexOf("Android");
   return {
