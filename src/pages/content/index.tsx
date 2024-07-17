@@ -26,8 +26,8 @@ export const getServerSideProps: GetServerSideProps = async ({
   );
   const ua = req.headers["user-agent"];
   console.log("ua:", ua);
-  const isIPhone = ua?.indexOf("iPhone");
-  const isAndroid = ua?.indexOf("Android");
+  const isIPhone = ua && ua?.indexOf("iPhone") >= 0;
+  const isAndroid = ua && ua?.indexOf("Android") >= 0;
   return {
     props: {
       isDark,
